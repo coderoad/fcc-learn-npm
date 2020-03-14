@@ -17,5 +17,6 @@
     "mocha": "^7.0.1",
     "mocha-tap-reporter": "^0.1.3"
   },
-  "author": "Your Name <your@email.com>"
+  "author": "Your Name <your@email.com>",
+  "description": "A description of the project"
 }
