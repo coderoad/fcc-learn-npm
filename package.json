@@ -1,0 +1,20 @@
+{
+  "name": "fcc-learn-npm-package-json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shmck/coderoad-learn-npm-package-json"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "programmatic-test": "mocha --reporter=mocha-tap-reporter",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "express": "^4.17.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.1",
+    "mocha-tap-reporter": "^0.1.3"
+  }
+}
