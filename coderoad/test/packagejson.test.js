@@ -15,4 +15,13 @@ describe("package.json", () => {
       'should have an "author" value that is a string'
     );
   });
+  // 1.2
+  it('should have a valid "description" key', () => {
+    assert.ok(json.description, '"description" is missing');
+    assert.equal(
+      typeof json.description,
+      "string",
+      'should have a "description" value that is a string'
+    );
+  });
 });
