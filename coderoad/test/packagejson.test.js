@@ -36,4 +36,13 @@ describe("package.json", () => {
       'should include "freecodecamp"'
     );
   });
+  // 1.4
+  it('should have a valid "license" key', () => {
+    assert.ok(json.license, '"license" is missing');
+    assert.equal(
+      typeof json.license,
+      "string",
+      'should have a "license" value that is a string, e.g. "MIT"'
+    );
+  });
 });
