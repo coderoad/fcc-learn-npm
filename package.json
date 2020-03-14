@@ -11,5 +11,6 @@
   "dependencies": {
     "express": "^4.17.0"
   },
-  "author": "Your Name <your@email.com>"
+  "author": "Your Name <your@email.com>",
+  "description": "A description of the project"
 }
