@@ -45,4 +45,13 @@ describe("package.json", () => {
       'should have a "license" value that is a string, e.g. "MIT"'
     );
   });
+  // 1.5
+  it('should have a valid "version" key', () => {
+    assert.ok(json.version, '"version" is missing');
+    assert.equal(
+      typeof json.version,
+      "string",
+      'should have a "version" value that is a string'
+    );
+  });
 });
