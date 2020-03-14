@@ -21,5 +21,6 @@
   "description": "A description of the project",
   "keywords": [
     "freecodecamp"
-  ]
+  ],
+  "license": "MIT"
 }
