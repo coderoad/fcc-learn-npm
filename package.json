@@ -12,5 +12,8 @@
     "express": "^4.17.0"
   },
   "author": "Your Name <your@email.com>",
-  "description": "A description of the project"
+  "description": "A description of the project",
+  "keywords": [
+    "freecodecamp"
+  ]
 }
