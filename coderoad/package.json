@@ -1,0 +1,15 @@
+{
+  "name": "coderoad-fcc-learn-npm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coderoad/fcc-learn-npm"
+  },
+  "scripts": {
+    "test": "mocha",
+    "programmatic-test": "mocha --reporter=mocha-tap-reporter"
+  },
+  "dependencies": {
+    "mocha": "^7.0.1",
+    "mocha-tap-reporter": "^0.1.3"
+  }
+}
