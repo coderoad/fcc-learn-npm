@@ -24,4 +24,16 @@ describe("package.json", () => {
       'should have a "description" value that is a string'
     );
   });
+  // 1.3
+  it('should have a valid "keywords" key', () => {
+    assert.ok(json.keywords, '"keywords" is missing');
+    assert.ok(
+      Array.isArray(json.keywords),
+      'should have a "keywords" value that is an array'
+    );
+    assert.ok(
+      json.keywords.includes("freecodecamp"),
+      'should include "freecodecamp"'
+    );
+  });
 });
