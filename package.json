@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "express": "^4.17.0",
-    "moment": "~2.10.2"
+    "moment": "^2.10.2"
   },
   "author": "Your Name <your@email.com>",
   "description": "A description of the project",
