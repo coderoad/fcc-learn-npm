@@ -71,25 +71,11 @@ describe("package.json", () => {
       )
     );
   });
-  // 2.2
-  it('should use specific version of "moment"', () => {
-    assert.equal(
-      json.dependencies.moment,
-      "2.10.2",
-      '"moment" should use the specific version'
-    );
-  });
-  it('should have installed specific version of "moment"', async () => {
+  // 2.3
+  it('should allow npm to update to any patch release of "moment"', () => {
     assert.ok(
-      await doesNotThrow(
-        () =>
-          isModuleInstalled({
-            name: "moment",
-            type: "dependency",
-            version: "2.10.2"
-          }),
-        '"moment" not installed'
-      )
+      json.dependencies.moment.match(/^~/),
+      '"moment" should specify a patch release with "~"'
     );
   });
 });
