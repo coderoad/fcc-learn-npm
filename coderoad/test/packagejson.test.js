@@ -1,4 +1,4 @@
-const { getPackageJson } = require("./utils");
+const { getPackageJson, isModuleInstalled, doesNotThrow } = require("./utils");
 const assert = require("assert");
 
 describe("package.json", () => {
@@ -52,6 +52,23 @@ describe("package.json", () => {
       typeof json.version,
       "string",
       'should have a "version" value that is a string'
+    );
+  });
+  // 2.1
+  it('should have "dependencies"', () => {
+    assert.ok(json.dependencies, '"dependencies" is missing');
+    assert.equal(
+      typeof json.dependencies,
+      "object",
+      'should have a "dependencies" value that is an object'
+    );
+  });
+  it('should have installed "moment"', async () => {
+    assert.ok(
+      await doesNotThrow(
+        () => isModuleInstalled({ name: "moment", type: "dependency" }),
+        '"moment" not installed'
+      )
     );
   });
 });
