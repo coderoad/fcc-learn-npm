@@ -71,11 +71,11 @@ describe("package.json", () => {
       )
     );
   });
-  // 2.3
-  it('should allow npm to update to any patch release of "moment"', () => {
+  // 2.4
+  it('should allow npm to update to any minor release of "moment"', () => {
     assert.ok(
-      json.dependencies.moment.match(/^~/),
-      '"moment" should specify a patch release with "~"'
+      json.dependencies.moment.match(/^\^/),
+      '"moment" should specify a minor release with "^"'
     );
   });
 });
