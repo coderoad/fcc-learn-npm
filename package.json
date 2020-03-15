@@ -9,8 +9,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.17.0",
-    "moment": "^2.10.2"
+    "express": "^4.17.0"
   },
   "author": "Your Name <your@email.com>",
   "description": "A description of the project",
