@@ -3,9 +3,9 @@ const {
 } = require("fs");
 const { join } = require("path");
 
-const getPackageJson = async () => {
+const getPackageJson = async (dir = process.cwd()) => {
   // load package.json file
-  const pathToPackageJson = join(process.cwd(), "package.json");
+  const pathToPackageJson = join(dir, "package.json");
   const packageJson = await readFile(pathToPackageJson, "utf8").catch(
     console.error
   );
@@ -22,6 +22,14 @@ const getPackageJson = async () => {
 
 exports.getPackageJson = getPackageJson;
 
+const versionMatch = (current, expected) => {
+  let currentSemver = current;
+  if (["~", "^"].includes(current[0])) {
+    currentSemver = current.substring(1);
+  }
+  return currentSemver === expected;
+};
+
 /**
  * isModuleInstalled
  * @param { name, type } params
@@ -29,22 +37,25 @@ exports.getPackageJson = getPackageJson;
  * "type" - "dependency", "devDependency", "peerDependency"
  * @returns boolean
  */
-const isModuleInstalled = async ({ name, type }) => {
+const isModuleInstalled = async ({ name, type, version }) => {
   // 1. load package.json file
   const json = await getPackageJson();
 
   // 2. verify package lists dependency by type
   let installCommand;
   let hasDependency;
+  let currentVersion;
 
   switch (type) {
     case "dependency":
       installCommand = "--save";
       hasDependency = !!json.dependencies && json.dependencies[name];
+      currentVersion = json.dependencies[name];
       break;
     case "devDependency":
       installCommand = "--save-dev";
       hasDependency = !!json.devDependencies && json.devDependencies[name];
+      currentVersion = json.devDependencies[name];
       break;
     case "peerDependency":
       throw new Error("Peer dependencies unsupported");
@@ -56,7 +67,14 @@ const isModuleInstalled = async ({ name, type }) => {
     throw new Error(`Run "npm install ${installCommand} ${name}"`);
   }
 
-  // 3. verify node_module installed
+  // 3. if version, check dependency version
+  if (version && !versionMatch(currentVersion, version)) {
+    throw new Error(
+      `Dependency ${name} version ${currentVersion} does not match expected ${version}`
+    );
+  }
+
+  // 4. verify node_module installed
   const pathToNodeModule = join(process.cwd(), "node_modules", name);
   const hasNodeModules = await readdir(pathToNodeModule).catch(() => {
     throw new Error('Missing node_modules. Run "npm install"');
@@ -65,7 +83,16 @@ const isModuleInstalled = async ({ name, type }) => {
     throw new Error('Missing node_modules. Run "npm install"');
   }
 
-  // 4. is installed
+  // 5. if version, has installed node_module version
+  if (version) {
+    const nodeModulePackageJson = await getPackageJson(pathToNodeModule);
+    if (!versionMatch(nodeModulePackageJson.version, version)) {
+      throw new Error(
+        `Dependency ${name} version ${version} is not yet installed. Run "npm install"`
+      );
+    }
+  }
+
   return true;
 };
 
