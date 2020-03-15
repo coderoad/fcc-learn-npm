@@ -63,19 +63,11 @@ describe("package.json", () => {
       'should have a "dependencies" value that is an object'
     );
   });
-  it('should have installed "moment"', async () => {
+  // 2.5
+  it('should remove the dependency "moment"', () => {
     assert.ok(
-      await doesNotThrow(
-        () => isModuleInstalled({ name: "moment", type: "dependency" }),
-        '"moment" not installed'
-      )
-    );
-  });
-  // 2.4
-  it('should allow npm to update to any minor release of "moment"', () => {
-    assert.ok(
-      json.dependencies.moment.match(/^\^/),
-      '"moment" should specify a minor release with "^"'
+      !json.dependencies.moment,
+      '"moment" should be removed as a dependency'
     );
   });
 });
