@@ -14,7 +14,7 @@
     },
     "dependencies": [{
       "name": "node",
-      "version": ">10"
+      "version": ">=10"
     }]
   },
   "levels": [

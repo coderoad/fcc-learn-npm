@@ -11,7 +11,7 @@ config:
     branch: v0.1.0
   dependencies:
     - name: node
-      version: ^10
+      version: >=10
 ```
 
 ## Intro
