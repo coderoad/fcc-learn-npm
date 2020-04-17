@@ -1,0 +1,14 @@
+{
+  "name": "fcc-learn-npm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coderoad/fcc-learn-npm"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.0"
+  }
+}
