@@ -6,9 +6,16 @@
 config:
   testRunner:
     command: npm run programmatic-test
+    path: coderoad
+    actions:
+      commits:
+        - '55a9b6d'
+        - '34f028e'
+      commands:
+        - npm install
   repo:
     uri: https://github.com/coderoad/fcc-learn-npm
-    branch: v0.1.0
+    branch: v0.3.0
   dependencies:
     - name: node
       version: >=10
@@ -47,15 +54,14 @@ setup:
   files:
     - package.json
   commits:
-    - '6b7cf6f'
-    - '8df92a5'
+    - 'c3b4350'
   commands:
     - npm install
 solution:
   files:
     - package.json
   commits:
-    - '49577c7'
+    - '02cd4f2'
 ```
 
 Add your name as the `author` of the project in the package.json file.
@@ -83,12 +89,12 @@ setup:
   files:
     - package.json
   commits:
-    - 'c9718b2'
+    - '1917199'
 solution:
   files:
     - package.json
   commits:
-    - 'a15aa99'
+    - 'e8b3d85'
 ```
 
 Add a `description` to the package.json file of your project.
@@ -116,12 +122,12 @@ setup:
   files:
     - package.json
   commits:
-    - '2b907ae'
+    - '2ba75f8'
 solution:
   files:
     - package.json
   commits:
-    - '6342f64'
+    - '63cd193'
 ```
 
 Add an array of suitable strings to the `keywords` field in the package.json file of your project.
@@ -147,12 +153,12 @@ setup:
   files:
     - package.json
   commits:
-    - '96e3915'
+    - 'acd63ba'
 solution:
   files:
     - package.json
   commits:
-    - 'ec61d78'
+    - 'a64411c'
 ```
 
 Fill the `license` field in the package.json file of your project as you find suitable.
@@ -174,12 +180,12 @@ setup:
   files:
     - package.json
   commits:
-    - '8ed877a'
+    - '580d786'
 solution:
   files:
     - package.json
   commits:
-    - '5be16a2'
+    - 'a92903d'
 ```
 
 Add a `version` to the package.json file of your project.
@@ -216,7 +222,7 @@ setup:
   files:
     - package.json
   commits:
-    - 'f89980a'
+    - 'eafc39a'
   watchers:
     - package.json
     - node_modules/moment
@@ -224,7 +230,7 @@ solution:
   files:
     - package.json
   commits:
-    - '6bcac25'
+    - '50da157'
 ```
 
 Install the "moment" package to the `dependencies` field of your package.json file by running the command line npm install.
@@ -263,7 +269,7 @@ setup:
   files:
     - package.json
   commits:
-    - 'c7b5458'
+    - 'e658c66'
   watchers:
     - package.json
     - node_modules/moment
@@ -271,7 +277,7 @@ solution:
   files:
     - package.json
   commits:
-    - '7854c2f'
+    - 'f10433e'
 ```
 
 In the dependencies section of your package.json file, change the `version` of moment to match MAJOR version 2, MINOR version 10 and PATCH version 2
@@ -295,12 +301,12 @@ setup:
   files:
     - package.json
   commits:
-    - 'ff88ec9'
+    - 'b4edb0c'
 solution:
   files:
     - package.json
   commits:
-    - 'a4b2700'
+    - '8e169e1'
 ```
 
 In the package.json file, your current rule for how npm may upgrade moment is to use a specific version (2.10.2). But now, you want to allow the latest 2.10.x version.
@@ -329,12 +335,12 @@ setup:
   files:
     - package.json
   commits:
-    - 'dd56157'
+    - '67c5f7b'
 solution:
   files:
     - package.json
   commits:
-    - 'a9ec3c0'
+    - '601c5fe'
 ```
 
 Use the caret (`^`) to prefix the version of moment in your dependencies and allow npm to update it to any new MINOR release.
@@ -358,12 +364,12 @@ setup:
   files:
     - package.json
   commits:
-    - '9e35b51'
+    - '4359bde'
 solution:
   files:
     - package.json
   commits:
-    - '9536de2'
+    - 'f8cfb51'
 ```
 
 Remove the moment package from your dependencies.
