@@ -10,7 +10,7 @@ config:
     actions:
       commits:
         - '55a9b6d'
-        - '89bdaa5'
+        - '34f028e'
       commands:
         - npm install
   repo:
@@ -54,14 +54,14 @@ setup:
   files:
     - package.json
   commits:
-    - '886d5b6'
+    - 'c3b4350'
   commands:
     - npm install
 solution:
   files:
     - package.json
   commits:
-    - 'bb42c6f'
+    - '02cd4f2'
 ```
 
 Add your name as the `author` of the project in the package.json file.
@@ -89,12 +89,12 @@ setup:
   files:
     - package.json
   commits:
-    - 'fe0ebbe'
+    - '1917199'
 solution:
   files:
     - package.json
   commits:
-    - '713bc2b'
+    - 'e8b3d85'
 ```
 
 Add a `description` to the package.json file of your project.
@@ -122,12 +122,12 @@ setup:
   files:
     - package.json
   commits:
-    - '33dfae3'
+    - '2ba75f8'
 solution:
   files:
     - package.json
   commits:
-    - 'e09726e'
+    - '63cd193'
 ```
 
 Add an array of suitable strings to the `keywords` field in the package.json file of your project.
@@ -153,12 +153,12 @@ setup:
   files:
     - package.json
   commits:
-    - '391fa87'
+    - 'acd63ba'
 solution:
   files:
     - package.json
   commits:
-    - '67de325'
+    - 'a64411c'
 ```
 
 Fill the `license` field in the package.json file of your project as you find suitable.
@@ -180,12 +180,12 @@ setup:
   files:
     - package.json
   commits:
-    - 'cf615ba'
+    - '580d786'
 solution:
   files:
     - package.json
   commits:
-    - 'b3cd2f7'
+    - 'a92903d'
 ```
 
 Add a `version` to the package.json file of your project.
@@ -222,7 +222,7 @@ setup:
   files:
     - package.json
   commits:
-    - 'bd92935'
+    - 'eafc39a'
   watchers:
     - package.json
     - node_modules/moment
@@ -230,7 +230,7 @@ solution:
   files:
     - package.json
   commits:
-    - '3bd10c2'
+    - '50da157'
 ```
 
 Install the "moment" package to the `dependencies` field of your package.json file by running the command line npm install.
@@ -269,7 +269,7 @@ setup:
   files:
     - package.json
   commits:
-    - '98a8637'
+    - 'e658c66'
   watchers:
     - package.json
     - node_modules/moment
@@ -277,7 +277,7 @@ solution:
   files:
     - package.json
   commits:
-    - '5222dda'
+    - 'f10433e'
 ```
 
 In the dependencies section of your package.json file, change the `version` of moment to match MAJOR version 2, MINOR version 10 and PATCH version 2
@@ -301,12 +301,12 @@ setup:
   files:
     - package.json
   commits:
-    - '01db156'
+    - 'b4edb0c'
 solution:
   files:
     - package.json
   commits:
-    - '57e4d75'
+    - '8e169e1'
 ```
 
 In the package.json file, your current rule for how npm may upgrade moment is to use a specific version (2.10.2). But now, you want to allow the latest 2.10.x version.
@@ -335,12 +335,12 @@ setup:
   files:
     - package.json
   commits:
-    - 'c6f9525'
+    - '67c5f7b'
 solution:
   files:
     - package.json
   commits:
-    - 'f9447cd'
+    - '601c5fe'
 ```
 
 Use the caret (`^`) to prefix the version of moment in your dependencies and allow npm to update it to any new MINOR release.
@@ -364,12 +364,12 @@ setup:
   files:
     - package.json
   commits:
-    - 'e090655'
+    - '4359bde'
 solution:
   files:
     - package.json
   commits:
-    - '2e81321'
+    - 'f8cfb51'
 ```
 
 Remove the moment package from your dependencies.
