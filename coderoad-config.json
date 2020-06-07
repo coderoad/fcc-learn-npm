@@ -6,9 +6,13 @@
   },
   "config": {
     "testRunner": {
-      "command": "npm run programmatic-test",
-      "path": "coderoad",
-      "actions": {
+      "command": "./node_modules/.bin/mocha",
+      "args": {
+        "filter": "--grep",
+        "tap": "--reporter=mocha-tap-reporter"
+      },
+      "directory": "coderoad",
+      "setup": {
         "commits": ["55a9b6d", "d58d630"],
         "commands": ["npm install"]
       }
