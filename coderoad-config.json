@@ -19,7 +19,7 @@
     },
     "repo": {
       "uri": "https://github.com/coderoad/fcc-learn-npm",
-      "branch": "v0.3.0"
+      "branch": "v0.4.0"
     },
     "dependencies": [{
       "name": "node",
