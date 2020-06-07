@@ -28,81 +28,81 @@ levels:
         solution:
           files:
             - package.json
-      - id: L3
-        steps:
-          - id: L3S1
-            setup:
-              files: 
-                - package.json
-            solution:
-              files: 
-                - package.json
-      - id: L4
-        steps:
-          - id: L4S1
-            setup:
-              files: 
-                - package.json
-            soluition: 
-              files: 
-                - package.json
-      - id: L5
-        steps:
-          - id: L5S1
-            setup:
-              files: 
-                - package.json
-      - id: L6
-        steps:
-          - id: L6S1
-            setup:
-              files: 
-                - package.json
-      - id: L7
-        steps:
-          - id: L7S1
-            setup:
-              files:
-                - package.json
-              watchers:
-                - package.json
-                - node_modules/moment
-            solution: 
-              files:
-                - package.json
-      - id: L8
-        steps:
-          - id: L8S1
-            setup:
-              files:
-                - package.json
-              watchers:
-                - package.json
-                - node_modules/moment
-      - id: L9
-        steps:
-          - id: L9S1
-            setup:
-              files:
-                - package.json
-            solution:
-              files:
-                - package.json
-      - id: L10
-        steps:
-          - id: L10S1
-            setup:
-              files:
-                - package.json
-            solution:
-              files:
-                - package.json
-      - id: L11
-        steps:
-          - id: L11S1
-            setup:
-              files:
-                - package.json
-            solution:
-              files:
-                - package.json
+  - id: L3
+    steps:
+      - id: L3S1
+        setup:
+          files: 
+            - package.json
+        solution:
+          files: 
+            - package.json
+  - id: L4
+    steps:
+      - id: L4S1
+        setup:
+          files: 
+            - package.json
+        soluition: 
+          files: 
+            - package.json
+  - id: L5
+    steps:
+      - id: L5S1
+        setup:
+          files: 
+            - package.json
+  - id: L6
+    steps:
+      - id: L6S1
+        setup:
+          files: 
+            - package.json
+  - id: L7
+    steps:
+      - id: L7S1
+        setup:
+          files:
+            - package.json
+          watchers:
+            - package.json
+            - node_modules/moment
+        solution: 
+          files:
+            - package.json
+  - id: L8
+    steps:
+      - id: L8S1
+        setup:
+          files:
+            - package.json
+          watchers:
+            - package.json
+            - node_modules/moment
+  - id: L9
+    steps:
+      - id: L9S1
+        setup:
+          files:
+            - package.json
+        solution:
+          files:
+            - package.json
+  - id: L10
+    steps:
+      - id: L10S1
+        setup:
+          files:
+            - package.json
+        solution:
+          files:
+            - package.json
+  - id: L11
+    steps:
+      - id: L11S1
+        setup:
+          files:
+            - package.json
+        solution:
+          files:
+            - package.json
