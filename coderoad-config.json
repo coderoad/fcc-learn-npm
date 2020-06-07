@@ -1,8 +1,8 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "summary": {
     "title": "Learn NPM package json",
-    "description": "The Node Package Manager (NPM) is a command-line tool used by developers to share and control modules (or packages) of JavaScript code written for use with Node.js."
+    "description": "> The Node Package Manager (NPM) is a command-line tool used by developers to share and control modules (or packages) of JavaScript code written for use with Node.js."
   },
   "config": {
     "testRunner": {
@@ -11,242 +11,319 @@
         "filter": "--grep",
         "tap": "--reporter=mocha-tap-reporter"
       },
-      "directory": "coderoad",
       "setup": {
-        "commits": ["55a9b6d", "d58d630"],
-        "commands": ["npm install"]
-      }
+        "commands": [
+          "npm install"
+        ],
+        "commits": [
+          "acf911ef693c870760bd4b66e00d9b4f320bd00a",
+          "1efa2e74255816a138ea9be998d49a6bdfbd082f"
+        ]
+      },
+      "directory": "coderoad"
     },
     "repo": {
       "uri": "https://github.com/coderoad/fcc-learn-npm",
       "branch": "v0.4.0"
     },
-    "dependencies": [{
-      "name": "node",
-      "version": ">=10"
-    }]
+    "dependencies": [
+      {
+        "name": "node",
+        "version": ">=10"
+      }
+    ]
   },
   "levels": [
     {
       "id": "L1",
       "title": "Intro",
       "summary": "Introduction to the package.json",
-      "content": "When starting a new project, NPM generates a package.json file. This file lists the package dependencies for your project. Since NPM packages are regularly updated, the package.json file allows you to set specific version numbers for each dependency. This ensures that updates to a package don't break your project.\n\nNPM saves packages in a folder named node_modules. These packages can be installed in two ways:\n\n- globally in a root node_modules folder, accessible by all projects.\n- locally within a project's own node_modules folder, accessible only to that project.\n\nMost developers prefer to install packages local to each project to create a separation between the dependencies of different projects.\n\nThe `package.json` file is the center of any Node.js project or NPM package. It stores information about your project, similar to how the &lt;head&gt; section of an HTML document describes the content of a webpage. It consists of a single JSON object where information is stored in key-value pairs. There are only two required fields; \"name\" and \"version\", but it’s good practice to provide additional information about your project that could be useful to future users or maintainers.\nIf you look at the file tree of your project, you will find the package.json file on the top level of the tree. This is the file that you will be improving in the next couple of challenges.\n",
-      "setup": null,
+      "content": "When starting a new project, NPM generates a package.json file. This file lists the package dependencies for your project. Since NPM packages are regularly updated, the package.json file allows you to set specific version numbers for each dependency. This ensures that updates to a package don't break your project.\n\nNPM saves packages in a folder named node_modules. These packages can be installed in two ways:\n\n- globally in a root node_modules folder, accessible by all projects.\n- locally within a project's own node_modules folder, accessible only to that project.\n\nMost developers prefer to install packages local to each project to create a separation between the dependencies of different projects.\n\nThe `package.json` file is the center of any Node.js project or NPM package. It stores information about your project, similar to how the &lt;head&gt; section of an HTML document describes the content of a webpage. It consists of a single JSON object where information is stored in key-value pairs. There are only two required fields; \"name\" and \"version\", but it’s good practice to provide additional information about your project that could be useful to future users or maintainers.\nIf you look at the file tree of your project, you will find the package.json file on the top level of the tree. This is the file that you will be improving in the next couple of challenges.",
       "steps": []
     },
     {
       "id": "L2",
-      "title": "Author",
-      "summary": "Package.json author",
-      "content": "One of the most common pieces of information in this file is the `author` field. It specifies who created the project, and can consist of a string or an object with contact or other details. An object is recommended for bigger projects, but a simple string like the following example will do for this project.\n\n```json\n\"author\": \"Jane Doe\",\n```\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L2:S1",
+          "id": "L2S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["5326ec8"],
-            "commands": ["npm install"]
+            "commands": [
+              "npm install"
+            ],
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "fcf44590ebfc9e36cedbd8b463972dfb3eaad640"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["424cf66"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "696e5c2a654406e9200e5734795e0d5cf06a0a4c"
+            ]
           },
-          "content": "Add your name as the `author` of the project in the package.json file.\n**Note:** Remember that you’re writing JSON, so all field names must use double-quotes (\") and be separated with a comma (,).\n\n"
+          "content": "Add your name as the `author` of the project in the package.json file.\n**Note:** Remember that you’re writing JSON, so all field names must use double-quotes (\") and be separated with a comma (,)."
         }
-      ]
+      ],
+      "title": "Author",
+      "summary": "Package.json author",
+      "content": "One of the most common pieces of information in this file is the `author` field. It specifies who created the project, and can consist of a string or an object with contact or other details. An object is recommended for bigger projects, but a simple string like the following example will do for this project.\n\n```json\n\"author\": \"Jane Doe\",\n```"
     },
     {
       "id": "L3",
-      "title": "Description",
-      "summary": "Package.json description",
-      "content": "The next part of a good package.json file is the `description` field; where a short, but informative description about your project belongs.\nIf you some day plan to publish a package to NPM, this is the string that should sell your idea to the user when they decide whether to install your package or not. However, that’s not the only use case for the description, it’s a great way to summarize what a project does. It’s just as important in any Node.js project to help other developers, future maintainers or even your future self understand the project quickly.\n\nRegardless of what you plan for your project, a description is definitely recommended.\n\nHere's an example:\n\n```json\n\"description\": \"A project that does something awesome\",\n```\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L3:S1",
+          "id": "L3S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["68ddb97"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "724aa86bb920a8fd0d83220333e7bb8b49c7b95a"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["138ad0e"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "d8ad886818a825269090eca824157db329051f75"
+            ]
           },
-          "content": "Add a `description` to the package.json file of your project.\n\n**Note:** Remember to use double-quotes for field-names (\") and commas (,) to separate fields.\n\n"
+          "content": "Add a `description` to the package.json file of your project.\n\n**Note:** Remember to use double-quotes for field-names (\") and commas (,) to separate fields."
         }
-      ]
+      ],
+      "title": "Description",
+      "summary": "Package.json description",
+      "content": "The next part of a good package.json file is the `description` field; where a short, but informative description about your project belongs.\nIf you some day plan to publish a package to NPM, this is the string that should sell your idea to the user when they decide whether to install your package or not. However, that’s not the only use case for the description, it’s a great way to summarize what a project does. It’s just as important in any Node.js project to help other developers, future maintainers or even your future self understand the project quickly.\n\nRegardless of what you plan for your project, a description is definitely recommended.\n\nHere's an example:\n\n```json\n\"description\": \"A project that does something awesome\",\n```"
     },
     {
       "id": "L4",
-      "title": "Keywords",
-      "summary": "Package.json keywords",
-      "content": "The `keywords` field is where you can describe your project using related keywords.\n\nHere's an example:\n\n```json\n\"keywords\": [ \"descriptive\", \"related\", \"words\" ],\n```\n\nAs you can see, this field is structured as an array of double-quoted strings.\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L4:S1",
+          "id": "L4S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["2069439"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "9e9c025c31b028dd566a88d027a2aa903468da21"
+            ]
+          },
+          "soluition": {
+            "files": [
+              "package.json"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["f2ed460"]
+            "commits": [
+              "7866f7c65b0c0a4a683a170a23469aebc2f47065"
+            ]
           },
-          "content": "Add an array of suitable strings to the `keywords` field in the package.json file of your project.\n\nOne of the keywords should be \"freecodecamp\".\n"
+          "content": "Add an array of suitable strings to the `keywords` field in the package.json file of your project.\n\nOne of the keywords should be \"freecodecamp\"."
         }
-      ]
+      ],
+      "title": "Keywords",
+      "summary": "Package.json keywords",
+      "content": "The `keywords` field is where you can describe your project using related keywords.\n\nHere's an example:\n\n```json\n\"keywords\": [ \"descriptive\", \"related\", \"words\" ],\n```\n\nAs you can see, this field is structured as an array of double-quoted strings."
     },
     {
       "id": "L5",
-      "title": "License",
-      "summary": "Package.json license",
-      "content": "The `license` field is where you inform users of what they are allowed to do with your project.\n\nSome common licenses for open source projects include MIT and BSD. License information is not required, and copyright laws in most countries will give you ownership of what you create by default. However, it’s always a good practice to explicitly state what users can and can’t do. Here's an example of the license field:\n\n```json\n\"license\": \"MIT\",\n```\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L5:S1",
+          "id": "L5S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["f2229d1"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "11bfb9394fee49b7d644d6ac067a69921586cb01"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["9378267"]
+            "commits": [
+              "4a6aef07073bc6d01302b085318330f4423d094f"
+            ]
           },
-          "content": "Fill the `license` field in the package.json file of your project as you find suitable.\n\n"
+          "content": "Fill the `license` field in the package.json file of your project as you find suitable."
         }
-      ]
+      ],
+      "title": "License",
+      "summary": "Package.json license",
+      "content": "The `license` field is where you inform users of what they are allowed to do with your project.\n\nSome common licenses for open source projects include MIT and BSD. License information is not required, and copyright laws in most countries will give you ownership of what you create by default. However, it’s always a good practice to explicitly state what users can and can’t do. Here's an example of the license field:\n\n```json\n\"license\": \"MIT\",\n```"
     },
     {
       "id": "L6",
-      "title": "Version",
-      "summary": "Package.json version",
-      "content": "A `version` is one of the required fields of your package.json file. This field describes the current version of your project. Here's an example:\n\n```json\n\"version\": \"1.2.0\",\n```\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L6:S1",
+          "id": "L6S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["60a4e7b"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "0d0df371240bdfd98db6d693247461ac5445848b"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["f9f7f29"]
+            "commits": [
+              "eca5ee35bc41b9a1f479085203df5acda968a15c"
+            ]
           },
-          "content": "Add a `version` to the package.json file of your project.\n\n"
+          "content": "Add a `version` to the package.json file of your project."
         }
-      ]
+      ],
+      "title": "Version",
+      "summary": "Package.json version",
+      "content": "A `version` is one of the required fields of your package.json file. This field describes the current version of your project. Here's an example:\n\n```json\n\"version\": \"1.2.0\",\n```"
     },
     {
       "id": "L7",
-      "title": "External Packages",
-      "summary": "Installing dependencies from NPM",
-      "content": "One of the biggest reasons to use a package manager, is their powerful dependency management. Instead of manually having to make sure that you get all dependencies whenever you set up a project on a new computer, NPM automatically installs everything for you. But how can NPM know exactly what your project needs? Meet the `dependencies` section of your package.json file.\n\nIn this section, packages your project requires are stored using the following format:\n\n```json\n\"dependencies\": {\n  \"package-name\": \"version\",\n  \"express\": \"4.17.0\"\n}\n```\n\nInstall a package by running the NPM command line tool in a terminal with the command `install`.\n\n```shell\nnpm install express\n```\n\n**Note:** Use the Use the `⌃\\`` keyboard shortcut with the backtick character to open the VSCode integrated terminal.\n\nInstalled packages are created in a `node_modules` folder in your project. Avoid editing or changing the node_modules folder or its contents.\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L7:S1",
+          "id": "L7S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["e97c095"],
-            "watchers": ["package.json", "node_modules/moment"]
+            "files": [
+              "package.json"
+            ],
+            "watchers": [
+              "package.json",
+              "node_modules/moment"
+            ],
+            "commits": [
+              "1e5641c6091adc09d5d137afbbb480e0d3740209"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["97af83a"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "943bbdecd65cac64ad63ce04587be92dea886706"
+            ]
           },
-          "content": "Install the \"moment\" package to the `dependencies` field of your package.json file by running the command line npm install.\n\n**Note:** Moment is a handy library for working with time and dates.\n\n"
+          "content": "Install the \"moment\" package to the `dependencies` field of your package.json file by running the command line npm install.\n\n**Note:** Moment is a handy library for working with time and dates."
         }
-      ]
+      ],
+      "title": "External Packages",
+      "summary": "Installing dependencies from NPM",
+      "content": "One of the biggest reasons to use a package manager, is their powerful dependency management. Instead of manually having to make sure that you get all dependencies whenever you set up a project on a new computer, NPM automatically installs everything for you. But how can NPM know exactly what your project needs? Meet the `dependencies` section of your package.json file.\n\nIn this section, packages your project requires are stored using the following format:\n\n```json\n\"dependencies\": {\n  \"package-name\": \"version\",\n  \"express\": \"4.17.0\"\n}\n```\n\nInstall a package by running the NPM command line tool in a terminal with the command `install`.\n\n```shell\nnpm install express\n```\n\n**Note:** Use the Use the `⌃\\`` keyboard shortcut with the backtick character to open the VSCode integrated terminal.\n\nInstalled packages are created in a `node_modules` folder in your project. Avoid editing or changing the node_modules folder or its contents."
     },
     {
       "id": "L8",
-      "title": "Semantic Versioning",
-      "summary": "Versioning packages",
-      "content": "`Versions` of the npm packages in the dependencies section of your package.json file follow what’s called Semantic Versioning (SemVer), an industry standard for software versioning aiming to make it easier to manage dependencies. Libraries, frameworks or other tools published on npm should use SemVer in order to clearly communicate what kind of changes projects can expect if they update.\n\nKnowing SemVer can be useful when you develop software that uses external dependencies (which you almost always do). One day, your understanding of these numbers will save you from accidentally introducing breaking changes to your project without understanding why things that worked yesterday suddenly don’t work today. This is how Semantic Versioning works according to the official website:\n\n```json\n\"package\": \"MAJOR.MINOR.PATCH\"\n```\n\nThe MAJOR version should increment when you make incompatible API changes.\n\nThe MINOR version should increment when you add functionality in a backwards-compatible manner.\n\nThe PATCH version should increment when you make backwards-compatible bug fixes.\nThis means that PATCHes are bug fixes and MINORs add new features but neither of them break what worked before. Finally, MAJORs add changes that won’t work with earlier versions.\n\nUsing the NPM cli, a specific version of a package can be installed by specifying the `@` version.\n\n```shell\nnpm install express@4.17.0\n```\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L8:S1",
+          "id": "L8S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["be03933"],
-            "watchers": ["package.json", "node_modules/moment"]
+            "files": [
+              "package.json"
+            ],
+            "watchers": [
+              "package.json",
+              "node_modules/moment"
+            ],
+            "commits": [
+              "521c7afdc232146a45352ecdf2f042f279081545"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["ba77ae7"]
+            "commits": [
+              "b233221f7c12e60e5a6f2a3ac8412ae4886d5e1e"
+            ]
           },
-          "content": "In the dependencies section of your package.json file, change the `version` of moment to match MAJOR version 2, MINOR version 10 and PATCH version 2\n\n"
+          "content": "In the dependencies section of your package.json file, change the `version` of moment to match MAJOR version 2, MINOR version 10 and PATCH version 2"
         }
-      ]
+      ],
+      "title": "Semantic Versioning",
+      "summary": "Versioning packages",
+      "content": "`Versions` of the npm packages in the dependencies section of your package.json file follow what’s called Semantic Versioning (SemVer), an industry standard for software versioning aiming to make it easier to manage dependencies. Libraries, frameworks or other tools published on npm should use SemVer in order to clearly communicate what kind of changes projects can expect if they update.\n\nKnowing SemVer can be useful when you develop software that uses external dependencies (which you almost always do). One day, your understanding of these numbers will save you from accidentally introducing breaking changes to your project without understanding why things that worked yesterday suddenly don’t work today. This is how Semantic Versioning works according to the official website:\n\n```json\n\"package\": \"MAJOR.MINOR.PATCH\"\n```\n\nThe MAJOR version should increment when you make incompatible API changes.\n\nThe MINOR version should increment when you add functionality in a backwards-compatible manner.\n\nThe PATCH version should increment when you make backwards-compatible bug fixes.\nThis means that PATCHes are bug fixes and MINORs add new features but neither of them break what worked before. Finally, MAJORs add changes that won’t work with earlier versions.\n\nUsing the NPM cli, a specific version of a package can be installed by specifying the `@` version.\n\n```shell\nnpm install express@4.17.0\n```"
     },
     {
       "id": "L9",
-      "title": "Receive Patch Updates",
-      "summary": "Using `~` to recieve patches",
-      "content": "In the last challenge, you told npm to only include a specific version of a package. That’s a useful way to freeze your dependencies if you need to make sure that different parts of your project stay compatible with each other. But in most use cases, you don’t want to miss bug fixes since they often include important security patches and (hopefully) don’t break things in doing so.\n\nTo allow an npm dependency to update to the latest PATCH version, you can prefix the dependency’s version with the tilde (`~`) character. Here's an example of how to allow updates to any 1.3.x version.\n\n```json\n\"package\": \"~1.3.8\"\n```\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L9:S1",
+          "id": "L9S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["c4ff0f6"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "cf81859377940b8545d6cd21cd05af8a1b78ffd8"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["cc1f2a5"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "9077c64962e5c7074fafa8495c4b5a62dc283a40"
+            ]
           },
-          "content": "In the package.json file, your current rule for how npm may upgrade moment is to use a specific version (2.10.2). But now, you want to allow the latest 2.10.x version.\nUse the tilde (`~`) character to prefix the version of moment in your dependencies, and allow npm to update it to any new PATCH release.\n\n**Note:** The version numbers themselves should not be changed.\n\n"
+          "content": "In the package.json file, your current rule for how npm may upgrade moment is to use a specific version (2.10.2). But now, you want to allow the latest 2.10.x version.\nUse the tilde (`~`) character to prefix the version of moment in your dependencies, and allow npm to update it to any new PATCH release.\n\n**Note:** The version numbers themselves should not be changed."
         }
-      ]
+      ],
+      "title": "Receive Patch Updates",
+      "summary": "Using `~` to recieve patches",
+      "content": "In the last challenge, you told npm to only include a specific version of a package. That’s a useful way to freeze your dependencies if you need to make sure that different parts of your project stay compatible with each other. But in most use cases, you don’t want to miss bug fixes since they often include important security patches and (hopefully) don’t break things in doing so.\n\nTo allow an npm dependency to update to the latest PATCH version, you can prefix the dependency’s version with the tilde (`~`) character. Here's an example of how to allow updates to any 1.3.x version.\n\n```json\n\"package\": \"~1.3.8\"\n```"
     },
     {
       "id": "L10",
-      "title": "Receive Minor Updates",
-      "summary": "Using `^` to receive minor updates",
-      "content": "Similar to how the tilde we learned about in the last challenge allows npm to install the latest PATCH for a dependency, the caret (`^`) allows npm to install future updates as well. The difference is that the caret will allow both MINOR updates and PATCHes.\n\nYour current version of moment should be \"~2.10.2\" which allows npm to install to the latest 2.10.x version. If you were to use the caret (`^`) as a version prefix instead, npm would be allowed to update to any 2.x.x version.\n\n```json\n\"package\": \"^1.3.8\"\n```\n\nThis would allow updates to any 1.x.x version of the package.\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L10:S1",
+          "id": "L10S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["fb75ecf"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "63ff80659d2ccbfdcddfebdda1e95e3e8b39f616"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["d0e1a22"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "b88fde52fa58cb10b7fcd14aad40334931106198"
+            ]
           },
-          "content": "Use the caret (`^`) to prefix the version of moment in your dependencies and allow npm to update it to any new MINOR release.\n\n**Note:** The version numbers themselves should not be changed.\n\n"
+          "content": "Use the caret (`^`) to prefix the version of moment in your dependencies and allow npm to update it to any new MINOR release.\n\n**Note:** The version numbers themselves should not be changed."
         }
-      ]
+      ],
+      "title": "Receive Minor Updates",
+      "summary": "Using `^` to receive minor updates",
+      "content": "Similar to how the tilde we learned about in the last challenge allows npm to install the latest PATCH for a dependency, the caret (`^`) allows npm to install future updates as well. The difference is that the caret will allow both MINOR updates and PATCHes.\n\nYour current version of moment should be \"~2.10.2\" which allows npm to install to the latest 2.10.x version. If you were to use the caret (`^`) as a version prefix instead, npm would be allowed to update to any 2.x.x version.\n\n```json\n\"package\": \"^1.3.8\"\n```\n\nThis would allow updates to any 1.x.x version of the package."
     },
     {
       "id": "L11",
-      "title": "Remove a Dependency",
-      "summary": "Removing a dependency",
-      "content": "You have now tested a few ways you can manage dependencies of your project by using the package.json's dependencies section. You have also included external packages by adding them to the file and even told npm what types of versions you want, by using special characters such as the tilde or the caret.\n\nBut what if you want to remove an external package that you no longer need? You might already have guessed it, just remove the corresponding key-value pair for that package from your dependencies.\n\nThis same method applies to removing other fields in your package.json as well.\n",
-      "setup": null,
       "steps": [
         {
-          "id": "L11:S1`",
+          "id": "L11S1",
           "setup": {
-            "files": ["package.json"],
-            "commits": ["da1e99e"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "21b448e9543e2a8a8c15b9ceab235d270f63fa00"
+            ]
           },
           "solution": {
-            "files": ["package.json"],
-            "commits": ["796b176"]
+            "files": [
+              "package.json"
+            ],
+            "commits": [
+              "f49b2590d72c3b3bdc7a6730d637992f0cf87a47"
+            ]
           },
-          "content": "Remove the moment package from your dependencies.\n\n**Note:** Make sure you have the right amount of commas after removing it.\n\n"
+          "content": "Remove the moment package from your dependencies.\n\n**Note:** Make sure you have the right amount of commas after removing it."
         }
-      ]
+      ],
+      "title": "Remove a Dependency",
+      "summary": "Removing a dependency",
+      "content": "You have now tested a few ways you can manage dependencies of your project by using the package.json's dependencies section. You have also included external packages by adding them to the file and even told npm what types of versions you want, by using special characters such as the tilde or the caret.\n\nBut what if you want to remove an external package that you no longer need? You might already have guessed it, just remove the corresponding key-value pair for that package from your dependencies.\n\nThis same method applies to removing other fields in your package.json as well."
     }
   ]
 }
