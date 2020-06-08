@@ -2,7 +2,7 @@
   "version": "0.4.0",
   "summary": {
     "title": "Learn NPM package json",
-    "description": "> The Node Package Manager (NPM) is a command-line tool used by developers to share and control modules (or packages) of JavaScript code written for use with Node.js."
+    "description": "The Node Package Manager (NPM) is a command-line tool used by developers to share and control modules (or packages) of JavaScript code written for use with Node.js."
   },
   "config": {
     "testRunner": {
