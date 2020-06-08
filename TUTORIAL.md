@@ -1,27 +1,8 @@
 # Learn NPM package json
 
-> The Node Package Manager (NPM) is a command-line tool used by developers to share and control modules (or packages) of JavaScript code written for use with Node.js.
+The Node Package Manager (NPM) is a command-line tool used by developers to share and control modules (or packages) of JavaScript code written for use with Node.js.
 
-```config
-config:
-  testRunner:
-    command: npm run programmatic-test
-    path: coderoad
-    actions:
-      commits:
-        - '55a9b6d'
-        - 'd58d630'
-      commands:
-        - npm install
-  repo:
-    uri: https://github.com/coderoad/fcc-learn-npm
-    branch: v0.3.0
-  dependencies:
-    - name: node
-      version: >=10
-```
-
-## Intro
+## L1 Intro
 
 > Introduction to the package.json
 
@@ -37,7 +18,7 @@ Most developers prefer to install packages local to each project to create a sep
 The `package.json` file is the center of any Node.js project or NPM package. It stores information about your project, similar to how the &lt;head&gt; section of an HTML document describes the content of a webpage. It consists of a single JSON object where information is stored in key-value pairs. There are only two required fields; "name" and "version", but it’s good practice to provide additional information about your project that could be useful to future users or maintainers.
 If you look at the file tree of your project, you will find the package.json file on the top level of the tree. This is the file that you will be improving in the next couple of challenges.
 
-## Author
+## L2 Author
 
 > Package.json author
 
@@ -47,27 +28,12 @@ One of the most common pieces of information in this file is the `author` field.
 "author": "Jane Doe",
 ```
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - '5326ec8'
-  commands:
-    - npm install
-solution:
-  files:
-    - package.json
-  commits:
-    - '424cf66'
-```
+### L2S1
 
 Add your name as the `author` of the project in the package.json file.
 **Note:** Remember that you’re writing JSON, so all field names must use double-quotes (") and be separated with a comma (,).
 
-## Description
+## L3 Description
 
 > Package.json description
 
@@ -82,26 +48,13 @@ Here's an example:
 "description": "A project that does something awesome",
 ```
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - '68ddb97'
-solution:
-  files:
-    - package.json
-  commits:
-    - '138ad0e'
-```
+### L3S1
 
 Add a `description` to the package.json file of your project.
 
 **Note:** Remember to use double-quotes for field-names (") and commas (,) to separate fields.
 
-## Keywords
+## L4 Keywords
 
 > Package.json keywords
 
@@ -115,26 +68,13 @@ Here's an example:
 
 As you can see, this field is structured as an array of double-quoted strings.
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - '2069439'
-solution:
-  files:
-    - package.json
-  commits:
-    - 'f2ed460'
-```
+### L4S1
 
 Add an array of suitable strings to the `keywords` field in the package.json file of your project.
 
 One of the keywords should be "freecodecamp".
 
-## License
+## L5 License
 
 > Package.json license
 
@@ -146,24 +86,11 @@ Some common licenses for open source projects include MIT and BSD. License infor
 "license": "MIT",
 ```
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - 'f2229d1'
-solution:
-  files:
-    - package.json
-  commits:
-    - '9378267'
-```
+### L5S1
 
 Fill the `license` field in the package.json file of your project as you find suitable.
 
-## Version
+## L6 Version
 
 > Package.json version
 
@@ -173,24 +100,11 @@ A `version` is one of the required fields of your package.json file. This field 
 "version": "1.2.0",
 ```
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - '60a4e7b'
-solution:
-  files:
-    - package.json
-  commits:
-    - 'f9f7f29'
-```
+### L6S1
 
 Add a `version` to the package.json file of your project.
 
-## External Packages
+## L7 External Packages
 
 > Installing dependencies from NPM
 
@@ -215,29 +129,13 @@ npm install express
 
 Installed packages are created in a `node_modules` folder in your project. Avoid editing or changing the node_modules folder or its contents.
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - 'e97c095'
-  watchers:
-    - package.json
-    - node_modules/moment
-solution:
-  files:
-    - package.json
-  commits:
-    - '97af83a'
-```
+### L7S1
 
 Install the "moment" package to the `dependencies` field of your package.json file by running the command line npm install.
 
 **Note:** Moment is a handy library for working with time and dates.
 
-## Semantic Versioning
+## L8 Semantic Versioning
 
 > Versioning packages
 
@@ -262,27 +160,11 @@ Using the NPM cli, a specific version of a package can be installed by specifyin
 npm install express@4.17.0
 ```
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - 'be03933'
-  watchers:
-    - package.json
-    - node_modules/moment
-solution:
-  files:
-    - package.json
-  commits:
-    - 'ba77ae7'
-```
+### L8S1
 
 In the dependencies section of your package.json file, change the `version` of moment to match MAJOR version 2, MINOR version 10 and PATCH version 2
 
-## Receive Patch Updates
+## L9 Receive Patch Updates
 
 > Using `~` to recieve patches
 
@@ -294,27 +176,14 @@ To allow an npm dependency to update to the latest PATCH version, you can prefix
 "package": "~1.3.8"
 ```
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - 'c4ff0f6'
-solution:
-  files:
-    - package.json
-  commits:
-    - 'cc1f2a5'
-```
+### L9S1
 
 In the package.json file, your current rule for how npm may upgrade moment is to use a specific version (2.10.2). But now, you want to allow the latest 2.10.x version.
 Use the tilde (`~`) character to prefix the version of moment in your dependencies, and allow npm to update it to any new PATCH release.
 
 **Note:** The version numbers themselves should not be changed.
 
-## Receive Minor Updates
+## L10 Receive Minor Updates
 
 > Using `^` to receive minor updates
 
@@ -328,26 +197,13 @@ Your current version of moment should be "~2.10.2" which allows npm to install t
 
 This would allow updates to any 1.x.x version of the package.
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - 'fb75ecf'
-solution:
-  files:
-    - package.json
-  commits:
-    - 'd0e1a22'
-```
+### L10S1
 
 Use the caret (`^`) to prefix the version of moment in your dependencies and allow npm to update it to any new MINOR release.
 
 **Note:** The version numbers themselves should not be changed.
 
-## Remove a Dependency
+## L11 Remove a Dependency
 
 > Removing a dependency
 
@@ -357,20 +213,7 @@ But what if you want to remove an external package that you no longer need? You 
 
 This same method applies to removing other fields in your package.json as well.
 
-### Step 1
-
-```config
-setup:
-  files:
-    - package.json
-  commits:
-    - 'da1e99e'
-solution:
-  files:
-    - package.json
-  commits:
-    - '796b176'
-```
+### L11S1
 
 Remove the moment package from your dependencies.
 
