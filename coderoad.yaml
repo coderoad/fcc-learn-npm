@@ -70,6 +70,8 @@ levels:
         solution: 
           files:
             - package.json
+          commands:
+            - npm install
   - id: L8
     steps:
       - id: L8S1
@@ -79,6 +81,11 @@ levels:
           watchers:
             - package.json
             - node_modules/moment
+        solution:
+          files:
+            - package.json
+          commands:
+            - npm install
   - id: L9
     steps:
       - id: L9S1
