@@ -43,7 +43,7 @@ levels:
         setup:
           files: 
             - package.json
-        soluition: 
+        solution: 
           files: 
             - package.json
   - id: L5
