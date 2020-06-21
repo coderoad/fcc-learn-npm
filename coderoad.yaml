@@ -11,15 +11,15 @@ config:
     directory: coderoad
   repo:
     uri: https://github.com/coderoad/fcc-learn-npm
-    branch: v0.4.0
+    branch: v0.4.1
   dependencies:
     - name: node
       version: '>=10'
 levels:
-  - id: L1
-  - id: L2
+  - id: '1'
+  - id: '2'
     steps:
-      - id: L2S1
+      - id: '2.1'
         setup:
           commands:
             - npm install
@@ -28,39 +28,39 @@ levels:
         solution:
           files:
             - package.json
-  - id: L3
+  - id: '3'
     steps:
-      - id: L3S1
+      - id: '3.1'
         setup:
           files: 
             - package.json
         solution:
           files: 
             - package.json
-  - id: L4
+  - id: '4'
     steps:
-      - id: L4S1
+      - id: '4.1'
         setup:
           files: 
             - package.json
         solution: 
           files: 
             - package.json
-  - id: L5
+  - id: '5'
     steps:
-      - id: L5S1
+      - id: '5.1'
         setup:
           files: 
             - package.json
-  - id: L6
+  - id: '6'
     steps:
-      - id: L6S1
+      - id: '6.1'
         setup:
           files: 
             - package.json
-  - id: L7
+  - id: '7'
     steps:
-      - id: L7S1
+      - id: '7.1'
         setup:
           files:
             - package.json
@@ -72,9 +72,9 @@ levels:
             - package.json
           commands:
             - npm install
-  - id: L8
+  - id: '8'
     steps:
-      - id: L8S1
+      - id: '8.1'
         setup:
           files:
             - package.json
@@ -86,27 +86,27 @@ levels:
             - package.json
           commands:
             - npm install
-  - id: L9
+  - id: '9'
     steps:
-      - id: L9S1
+      - id: '9.1'
         setup:
           files:
             - package.json
         solution:
           files:
             - package.json
-  - id: L10
+  - id: '10'
     steps:
-      - id: L10S1
+      - id: '10.1'
         setup:
           files:
             - package.json
         solution:
           files:
             - package.json
-  - id: L11
+  - id: '11'
     steps:
-      - id: L11S1
+      - id: '11.1'
         setup:
           files:
             - package.json
