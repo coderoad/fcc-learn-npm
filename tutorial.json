@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "0.4.0",
   "summary": {
     "title": "Learn NPM package json",
     "description": "The Node Package Manager (NPM) is a command-line tool used by developers to share and control modules (or packages) of JavaScript code written for use with Node.js."
@@ -16,8 +16,8 @@
           "npm install"
         ],
         "commits": [
-          "1efa2e74255816a138ea9be998d49a6bdfbd082f",
-          "a99811c863d561190f92b8aac455117407674880"
+          "a99811c863d561190f92b8aac455117407674880",
+          "1efa2e74255816a138ea9be998d49a6bdfbd082f"
         ]
       },
       "directory": "coderoad"
@@ -57,7 +57,7 @@
               "package.json"
             ],
             "commits": [
-              "0c44989fe404b653c46ca0089f5525412fd054e1"
+              "af2a97be3e4e0fda484913aa14df0d1a34c457a3"
             ]
           },
           "solution": {
@@ -65,7 +65,7 @@
               "package.json"
             ],
             "commits": [
-              "3255614fee55570d2e8a81ebaab660a16f5fa8f5"
+              "46794cae9d036c50b673b47363e9429ae331eaf6"
             ]
           },
           "content": "Add your name as the `author` of the project in the package.json file.\n**Note:** Remember that you’re writing JSON, so all field names must use double-quotes (\") and be separated with a comma (,)."
@@ -85,7 +85,7 @@
               "package.json"
             ],
             "commits": [
-              "04b29d4740330a9f7093ae23567cedc7ded7b758"
+              "1d2f58330ee9773ac7f80df5a628675fbead1e60"
             ]
           },
           "solution": {
@@ -93,7 +93,7 @@
               "package.json"
             ],
             "commits": [
-              "3d6acf2b5f540a7fc22c7535faa3577ef516ee36"
+              "ee7a7af1c92693d239528832f2a69859371a147a"
             ]
           },
           "content": "Add a `description` to the package.json file of your project.\n\n**Note:** Remember to use double-quotes for field-names (\") and commas (,) to separate fields."
@@ -113,7 +113,7 @@
               "package.json"
             ],
             "commits": [
-              "277487b9c613144dee3c1631391e45066b028967"
+              "6b8e6ef82ad0cd0dbb0193787c14ed39fe039132"
             ]
           },
           "solution": {
@@ -121,7 +121,7 @@
               "package.json"
             ],
             "commits": [
-              "3a5ee9890db6b8007ffb7d996e81a426bc5cb76f"
+              "b0d6dc4a4dd6b510fcd0b9d803e301049ee574d3"
             ]
           },
           "content": "Add an array of suitable strings to the `keywords` field in the package.json file of your project.\n\nOne of the keywords should be \"freecodecamp\"."
@@ -141,13 +141,13 @@
               "package.json"
             ],
             "commits": [
-              "301da3567d0803f07083f2de97a19078a249e2c4"
+              "67346726fb199a390aa9f402ec3a0516fcfeff74"
             ]
           },
           "content": "Fill the `license` field in the package.json file of your project as you find suitable.",
           "solution": {
             "commits": [
-              "4e277b30ae6ce78457fb8b25732fa3e3f7d17375"
+              "060c0756282e4efc83435008dff06a5e4ef6943c"
             ]
           }
         }
@@ -166,13 +166,13 @@
               "package.json"
             ],
             "commits": [
-              "81cd62e8ccf8e4d34877393b0096a98243345ace"
+              "dc7f47dbbefb5f18cc5980418912d76096ee4907"
             ]
           },
           "content": "Add a `version` to the package.json file of your project.",
           "solution": {
             "commits": [
-              "259738a015b77b4ec147dc917b5a438d8cf72a1c"
+              "ad2cb8466d937eb7c03f99fc876b7ab08dd13067"
             ]
           }
         }
@@ -195,7 +195,7 @@
               "node_modules/moment"
             ],
             "commits": [
-              "7bdc84408fdcfb0dbff6f2cd3d6125599ed06e52"
+              "c3a72a33bb7b207b22b2dff04c0e01c269990754"
             ]
           },
           "solution": {
@@ -206,7 +206,7 @@
               "npm install"
             ],
             "commits": [
-              "977699a8452699154f74bb13245d7d71918f3f18"
+              "506f466305b95777a1be518bf91c35831806f21c"
             ]
           },
           "content": "Install the \"moment\" package to the `dependencies` field of your package.json file by running the command line npm install.\n\n**Note:** Moment is a handy library for working with time and dates."
@@ -230,7 +230,7 @@
               "node_modules/moment"
             ],
             "commits": [
-              "6f3be27106114523cb4a94d1dda21bb135afffd5"
+              "d75d588947efe26c5a2fe5bfd809da9211f8f2d3"
             ]
           },
           "solution": {
@@ -241,7 +241,7 @@
               "npm install"
             ],
             "commits": [
-              "929be35a0c7bebfda231424a825f6bb479dd2868"
+              "c38b20b9c8c5f9d68efa433fc33b715a70060d74"
             ]
           },
           "content": "In the dependencies section of your package.json file, change the `version` of moment to match MAJOR version 2, MINOR version 10 and PATCH version 2"
@@ -261,7 +261,7 @@
               "package.json"
             ],
             "commits": [
-              "60e1e9cc46eec61ec0612391cb6d0ceaf6397660"
+              "b4f94faaf7ee23103dbdb935083bae86ccf03799"
             ]
           },
           "solution": {
@@ -269,7 +269,7 @@
               "package.json"
             ],
             "commits": [
-              "a0212bd7e8dd8707070fbf5f1f7a63a15b478114"
+              "35f54899b037b00fdd85f45b0d5d94089cf599f4"
             ]
           },
           "content": "In the package.json file, your current rule for how npm may upgrade moment is to use a specific version (2.10.2). But now, you want to allow the latest 2.10.x version.\nUse the tilde (`~`) character to prefix the version of moment in your dependencies, and allow npm to update it to any new PATCH release.\n\n**Note:** The version numbers themselves should not be changed."
@@ -289,7 +289,7 @@
               "package.json"
             ],
             "commits": [
-              "089b2f2ebe795c6bda80606fe0f014929d0aef85"
+              "36951e66e83966359d20ece1a362b2bc91e4d722"
             ]
           },
           "solution": {
@@ -297,7 +297,7 @@
               "package.json"
             ],
             "commits": [
-              "8c0c303a7545846ffc098ce8f040fe827c7eb8e8"
+              "9578b3e8ef7f6c0f03d3e3b9b2b6bdc151e4e186"
             ]
           },
           "content": "Use the caret (`^`) to prefix the version of moment in your dependencies and allow npm to update it to any new MINOR release.\n\n**Note:** The version numbers themselves should not be changed."
@@ -317,7 +317,7 @@
               "package.json"
             ],
             "commits": [
-              "faac2c0c87cd0d99eb036b977339a1902d5012b0"
+              "364e2417076bf8d6604084409404ab9ff7b6533f"
             ]
           },
           "solution": {
@@ -325,7 +325,7 @@
               "package.json"
             ],
             "commits": [
-              "13bd9d0cdecd4e21e4b84f0f674ed72bf21626e0"
+              "d3ee6474be0c501136dde32efed480c9f3d8fdbf"
             ]
           },
           "content": "Remove the moment package from your dependencies.\n\n**Note:** Make sure you have the right amount of commas after removing it."
