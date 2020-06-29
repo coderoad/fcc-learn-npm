@@ -33,6 +33,11 @@ One of the most common pieces of information in this file is the `author` field.
 Add your name as the `author` of the project in the package.json file.
 **Note:** Remember that you’re writing JSON, so all field names must use double-quotes (") and be separated with a comma (,).
 
+#### HINTS
+
+- Edit the file `package.json`
+- Add a property of "author" to the object
+
 ## 3. Description
 
 > Package.json description
@@ -54,6 +59,11 @@ Add a `description` to the package.json file of your project.
 
 **Note:** Remember to use double-quotes for field-names (") and commas (,) to separate fields.
 
+#### HINTS
+
+- Edit the file `package.json`
+- Add a property of "description" to the object
+
 ## 4. Keywords
 
 > Package.json keywords
@@ -73,6 +83,11 @@ As you can see, this field is structured as an array of double-quoted strings.
 Add an array of suitable strings to the `keywords` field in the package.json file of your project.
 
 One of the keywords should be "freecodecamp".
+
+#### HINTS
+
+- Edit the file `package.json`
+- "keywords" should be an array including the string "freecodecamp"
 
 ## 5. License
 

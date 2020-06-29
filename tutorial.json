@@ -68,7 +68,11 @@
               "46794cae9d036c50b673b47363e9429ae331eaf6"
             ]
           },
-          "content": "Add your name as the `author` of the project in the package.json file.\n**Note:** Remember that you’re writing JSON, so all field names must use double-quotes (\") and be separated with a comma (,)."
+          "content": "Add your name as the `author` of the project in the package.json file.\n**Note:** Remember that you’re writing JSON, so all field names must use double-quotes (\") and be separated with a comma (,).",
+          "hints": [
+            "Edit the file `package.json`",
+            "Add a property of \"author\" to the object"
+          ]
         }
       ]
     },
@@ -96,7 +100,11 @@
               "ee7a7af1c92693d239528832f2a69859371a147a"
             ]
           },
-          "content": "Add a `description` to the package.json file of your project.\n\n**Note:** Remember to use double-quotes for field-names (\") and commas (,) to separate fields."
+          "content": "Add a `description` to the package.json file of your project.\n\n**Note:** Remember to use double-quotes for field-names (\") and commas (,) to separate fields.",
+          "hints": [
+            "Edit the file `package.json`",
+            "Add a property of \"description\" to the object"
+          ]
         }
       ]
     },
@@ -124,7 +132,11 @@
               "b0d6dc4a4dd6b510fcd0b9d803e301049ee574d3"
             ]
           },
-          "content": "Add an array of suitable strings to the `keywords` field in the package.json file of your project.\n\nOne of the keywords should be \"freecodecamp\"."
+          "content": "Add an array of suitable strings to the `keywords` field in the package.json file of your project.\n\nOne of the keywords should be \"freecodecamp\".",
+          "hints": [
+            "Edit the file `package.json`",
+            "\"keywords\" should be an array including the string \"freecodecamp\""
+          ]
         }
       ]
     },
