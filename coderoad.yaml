@@ -1,20 +1,23 @@
-version: "0.4.0"
+version: "0.4.1"
 config:
   testRunner:
     command: ./node_modules/.bin/mocha
     args:
       filter: --grep
       tap: --reporter=mocha-tap-reporter
-    setup:
-      commands:
-        - npm install
     directory: coderoad
+  setup:
+    commands:
+      - cd coderoad && npm install
   repo:
     uri: https://github.com/coderoad/fcc-learn-npm
     branch: v0.4.1
   dependencies:
     - name: node
       version: '>=10'
+  reset:
+    commands: 
+      - echo 'resetting'
 levels:
   - id: '1'
   - id: '2'
