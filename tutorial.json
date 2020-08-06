@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "summary": {
     "title": "Learn NPM package json",
     "description": "The Node Package Manager (NPM) is a command-line tool used by developers to share and control modules (or packages) of JavaScript code written for use with Node.js."
@@ -11,16 +11,16 @@
         "filter": "--grep",
         "tap": "--reporter=mocha-tap-reporter"
       },
-      "setup": {
-        "commands": [
-          "npm install"
-        ],
-        "commits": [
-          "1efa2e74255816a138ea9be998d49a6bdfbd082f",
-          "a99811c863d561190f92b8aac455117407674880"
-        ]
-      },
       "directory": "coderoad"
+    },
+    "setup": {
+      "commands": [
+        "cd coderoad && npm install"
+      ],
+      "commits": [
+        "a99811c863d561190f92b8aac455117407674880",
+        "1efa2e74255816a138ea9be998d49a6bdfbd082f"
+      ]
     },
     "repo": {
       "uri": "https://github.com/coderoad/fcc-learn-npm",
@@ -31,7 +31,12 @@
         "name": "node",
         "version": ">=10"
       }
-    ]
+    ],
+    "reset": {
+      "commands": [
+        "echo 'resetting'"
+      ]
+    }
   },
   "levels": [
     {
