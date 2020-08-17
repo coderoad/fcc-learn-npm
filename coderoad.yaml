@@ -1,4 +1,4 @@
-version: "0.4.1"
+version: "0.4.2"
 config:
   testRunner:
     command: ./node_modules/.bin/mocha
@@ -11,7 +11,7 @@ config:
       - cd coderoad && npm install
   repo:
     uri: https://github.com/coderoad/fcc-learn-npm
-    branch: v0.4.1
+    branch: v0.4.2
   dependencies:
     - name: node
       version: '>=10'
