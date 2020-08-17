@@ -1,7 +1,7 @@
 version: "0.4.2"
 config:
   testRunner:
-    command: ./node_modules/.bin/mocha
+    command: node_modules/.bin/mocha
     args:
       filter: --grep
       tap: --reporter=mocha-tap-reporter
