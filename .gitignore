@@ -1,3 +1,6 @@
-.tmp
-node_modules
-coderoad
+# ALL
+!coderoad.yaml
+!tutorial.json
+!TUTORIAL.md
+!README.md
+!.gitignore
